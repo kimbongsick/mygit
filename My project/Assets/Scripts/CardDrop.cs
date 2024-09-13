@@ -4,13 +4,21 @@ using UnityEngine.UI;
 
 public class CardDrop : MonoBehaviour, IPointerEnterHandler, IDropHandler, IPointerExitHandler
 {
+    //[SerializeField]
     private Image image;
     private RectTransform rect;
+
+    //[SerializeField]
+    //private Image ChildImage;
 
     private void Awake()
     {
         image = GetComponent<Image>();
         rect = GetComponent<RectTransform>();
+
+        
+        //ChildImage = transform.GetChild(0).GetComponent<Image>(); 
+        //image.sprite = ChildImage.sprite;   
     }
 
     // 마우스 포인터가 현재 아이템 슬롯 영역 내부로 들어갈 때 1회 호출
